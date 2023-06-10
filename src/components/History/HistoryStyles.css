@@ -1,0 +1,37 @@
+.history {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.4);
+    position: relative;
+}
+
+.history:before {
+    content: "";
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.history .content{
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    left: 0;
+    padding: 1rem;
+}
+
+.history .h2 {
+    color: #f8f8f8;
+}
+
+.history p {
+    color:#f8f8f8;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width:940px) {
+    .history .content {
+        width: 100%;
+    }
+}
