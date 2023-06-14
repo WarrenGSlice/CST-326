@@ -6,7 +6,7 @@ const About = () => {
       <div className="container">
         <div className='content'>
             <h2><span>About</span> Page</h2>
-            <p>Here is a bunch of blank stuff that can be deleted when the real about page is added</p>
+            <p>Here is a bunch of blank stuff that can be deleted when the real about page is added TEST</p>
         </div>
       </div>
     </div>

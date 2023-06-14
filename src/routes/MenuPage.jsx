@@ -2,13 +2,13 @@ import React from 'react';
 import '../components/Menu/MenuStyles.css';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../container/Footer/Footer';
-import Menu from '../components/Menu/Menu';
+import SpecialMenu from '../container/Menu/SpecialMenu.jsx';
 
 function MenuPage () {
     return (
         <>
             <Navbar />
-            <Menu />
+            <SpecialMenu />
             <Footer />
         </>
         
