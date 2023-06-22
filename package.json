@@ -19,6 +19,12 @@
     "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
+  "comments":{
+    "secondary start for off line": "see line below",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "primary start for deployment": "see line below",
+    "start": "node server.js"
+  },
   "scripts": {
     "heroku-postbuild": "npm install",
     "start": "node server.js",

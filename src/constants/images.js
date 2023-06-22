@@ -22,6 +22,7 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
 import tastybites from '../assets/tastybites.png';
+import newwelcome from '../assets/newwelcome.png';
 
 export default {
   bg,
@@ -38,6 +39,7 @@ export default {
   overlaybg,
   spoon,
   welcome,
+  newwelcome,
   findus,
   laurels,
   award01,

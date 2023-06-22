@@ -20,7 +20,7 @@ const AboutUs = () => (
         Never before has american food tasted so good. Tasty Bites will make your mouth water
         while overlooking the historic city skyline. Our chefs have worked tirelessly
         for years to create perfection just for you.</p>
-        <button type="button" className="custom__button">More About Us</button>
+        <button type="button" className="custom__button"><a href='/About'>More About Us</a></button>
       </div>
 
       <div className="app__aboutus-content_knife flex__center">
@@ -33,7 +33,7 @@ const AboutUs = () => (
         <p className="p__opensans">Tasty Bites began in 2012 in the garage of famous jazz musician Felix Federoni. 
         After long music sessions Felix would get hungry and thats when he came up with the idea for Tasty Bites.
         Much like the smooth jazz he's famously known for, his burgers became a huge hit. That was just the start!</p>
-        <button type="button" className="custom__button">More History</button>
+        <button type="button" className="custom__button"><a href='/History'>More History</a></button>
       </div>
     </div>
   </div>

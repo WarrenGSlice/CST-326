@@ -13,11 +13,11 @@ const Header = () => (
         We specialize in a gourmet menu of classic american fare.
         Here at Tasty Bites we pride ourselves in serving the best american classics in an environment that has to be seen to believe.  
         </p>
-      <button type="button" className="custom__button">Explore Menu</button>
+      <button type="button" className="custom__button"><a href='/Menu'>Explore Menu</a></button>
     </div>
 
     <div className="app__wrapper_img">
-      <img src={images.welcome} alt="header_img" />
+      <img src={images.newwelcome} alt="header_img" />
     </div>
   </div>
 );

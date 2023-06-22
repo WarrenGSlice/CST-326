@@ -1,7 +1,7 @@
 .app__menuitem {
     width: 100%;
     margin: 1rem 0;
-
+    
     display: flex;
     flex-direction: column;
 }
@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #e100ff;
 }
 
 .app__menuitem-sub {
@@ -24,7 +25,7 @@
 .app__menuitem-dash {
     width: 90px;
     height: 1px;
-    background: var(--color-golden);
+    background: #e100ff;
     margin: 0 1rem;
 }
 

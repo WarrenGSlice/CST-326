@@ -1,10 +1,10 @@
 .app__header {
-    background-color: var(--color-black);
+    background-color: #000;
 }
 
 .app__header-h1 {
     font-family: var(--font-base);
-    color: var(--color-golden);
+    color: #0040ff;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -14,6 +14,26 @@
 
 .app__header-img img {
     width: 80%;
+}
+
+.app__header .custom__button{
+    border: 2px solid #240621;
+    padding: 14px 28px;
+    background-color: #e100ff;
+    font-size: larger;
+    -webkit-text-stroke: #ffffff;
+    -webkit-text-stroke-width:medium;
+    border-radius: 5em;
+    outline-width: 2em;
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.app__header .custom__button:hover {
+    background-color: #000000;
+    color:#e100ff;
+    border: 2px solid #e100ff;
+    -webkit-text-stroke:thin;
 }
 
 @media screen and (min-width: 2000px) {
