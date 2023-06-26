@@ -8,6 +8,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
+    
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
         <img src={images.tastybites} alt="app logo" />
