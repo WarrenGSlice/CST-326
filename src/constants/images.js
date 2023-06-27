@@ -23,6 +23,8 @@ import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
 import tastybites from '../assets/tastybites.png';
 import newwelcome from '../assets/newwelcome.png';
+import person from '../assets/person.svg';
+import cell from '../assets/cell.svg';
 
 export default {
   bg,
@@ -50,4 +52,6 @@ export default {
   quote,
   gericht,
   tastybites,
+  person,
+  cell,
 };
