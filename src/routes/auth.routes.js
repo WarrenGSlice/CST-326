@@ -20,4 +20,7 @@ module.exports = function(app) {
     );
 
     app.post('/api/auth/signin', controller.signin)
+
+    // I added the below line, not sure if this is what got it working Warren 6/28
+    app.post('/Register', controller.signup)
 }

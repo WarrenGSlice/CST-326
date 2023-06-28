@@ -19,14 +19,20 @@ app.use(cors(corsOption));
 const db = require("./src/models");
 const Role = db.role;
 
-db.sequelize.sync();
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
 // routes for auth and users
 require('./src/routes/auth.routes')(app);
 require('./src/routes/user.routes')(app);
+
+// I added the two lines below, not sure if this is what got it working Warren 6/28
+const userRouter = require('./src/routes/Posts');
+app.use("/Register", userRouter);
+
+// I moved this from line 22 to line 34 Warren 6/28
+db.sequelize.sync();
+
 
 app.use(express.static(path.join(__dirname, "build")));
 
