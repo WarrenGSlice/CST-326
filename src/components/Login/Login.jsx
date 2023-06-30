@@ -49,7 +49,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(inputs)
-      navigate("/");
+      navigate("/Admin");
     } catch (err) {
       // Alert bad user/pass
       alert('Invalid password')
@@ -78,8 +78,8 @@ const Login = () => {
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="username" class="input" name='username'  
+           		   		<h5></h5>
+           		   		<input type="username" class="input" name='username' placeholder='Username'
                     onChange={handleChange}
                     />
            		   </div>
@@ -89,8 +89,8 @@ const Login = () => {
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input" name='password' 
+           		    	<h5></h5>
+           		    	<input type="password" class="input" name='password' placeholder='Password'
                     onChange={handleChange}
                     />
             	   </div>

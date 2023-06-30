@@ -11,6 +11,7 @@ import About from './routes/AboutPage';
 import Contact from './routes/ContactPage';
 import History from './routes/HistoryPage';
 import Booking from './routes/BookingPage';
+import Admin from './routes/AdminDashboard';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route path="/" element={<App />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
+            <Route path="/Admin" element={<Admin />} />
             <Route path="/Menu" element={<Menu />} />
             <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
