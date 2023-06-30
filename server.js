@@ -26,6 +26,9 @@ app.use(bodyParser.json());
 require('./src/routes/auth.routes')(app);
 require('./src/routes/user.routes')(app);
 
+// route for menu
+require('./src/routes/menu.routes')(app);
+
 // I added the two lines below, not sure if this is what got it working Warren 6/28
 const userRouter = require('./src/routes/Posts');
 app.use("/Register", userRouter);
