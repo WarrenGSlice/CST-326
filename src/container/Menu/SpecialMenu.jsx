@@ -1,10 +1,31 @@
 import React from 'react';
-
+import { useEffect, useState } from 'react';
 import { SubHeading, MenuItem } from '../../components';
 import { data, images } from '../../constants';
 import './SpecialMenu.css';
 
-const SpecialMenu = () => (
+const SpecialMenu = () => {
+  const [specials, setSpecials] = useState([]);
+
+  // Pull menu from API
+  const fetechMenuData = () => {
+    fetch('https://tasty-bites.herokuapp.com/api/menu')
+    .then(response => {
+        console.log('fetch')
+        return response.json()
+    })
+    .then(data => {
+        console.log('setData')
+        setSpecials(data)
+    })
+  }
+
+  useEffect(() => {
+    console.log('useEffect')
+    fetechMenuData();
+  }, [])
+
+  return(
   <div className="app__specialMenu flex__center section__padding" id="menu">
     <div className="app__specialMenu-title">
       <SubHeading title="Menu that fits your palatte" />
@@ -18,6 +39,12 @@ const SpecialMenu = () => (
           {data.burgers.map((burgers, index) => (
             <MenuItem key={burgers.title + index} title={burgers.title} price={burgers.price} tags={burgers.tags} />
           ))}
+        </div>
+        <p className="app__specialMenu-menu_heading">Manager Specials</p>
+        <div className="app__specialMenu_menu_items">
+            {specials.map((specials, menu_id) => (
+                <MenuItem key={specials.dish_name + menu_id} title={specials.dish_name} price={`$${specials.price}`} tags={specials.description} />
+            ))}
         </div>
       </div>
 
@@ -40,5 +67,5 @@ const SpecialMenu = () => (
     </div>
   </div>
 );
-
+          }
 export default SpecialMenu;

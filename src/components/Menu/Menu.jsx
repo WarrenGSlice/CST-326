@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { SubHeading, MenuItem } from '../../components';
 import { data, images } from '../../constants';
 import './MenuStyles.css';
@@ -14,7 +13,7 @@ const Menu = () => {
 
           <div className="app__specialMenu-menu">
               <div className="app__specialMenu-menu_wine  flex__center">
-                  <p className="app__specialMenu-menu_heading">Burgers</p>
+                  <p className="app__specialMenu-menu_heading">Todays Burgers</p>
                   <div className="app__specialMenu_menu_items">
                       {data.burgers.map((burgers, index) => (
                           <MenuItem key={burgers.title + index} title={burgers.title} price={burgers.price} tags={burgers.tags} />
