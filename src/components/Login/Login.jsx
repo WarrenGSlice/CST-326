@@ -44,6 +44,8 @@ const Login = () => {
   }
 
   const [loginStatus, setLoginStatus] = useState("");
+  // Invalid Login Error
+  const [invalidLogin, setInvalidLogin] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,9 +54,7 @@ const Login = () => {
       navigate("/Admin");
     } catch (err) {
       // Alert bad user/pass
-      alert('Invalid password')
-      // remove route
-      navigate("/Login")
+      setInvalidLogin('Invalid User Name or Password');
       // Fix error
       // setError(err.response.data);
     }
@@ -71,6 +71,7 @@ const Login = () => {
 		</div>
 		<div className="app__login-login-content">
 			<form className="app__login-form" action="" >
+        <p className='invalid_log'>{invalidLogin}</p>
 				<img src={images.person} alt='person'/>                                   
 				<h2 class="title">Login</h2>
            		<div class="input-div one">

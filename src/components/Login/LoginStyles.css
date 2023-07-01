@@ -186,6 +186,12 @@
 	background-position: right;
 }
 
+.invalid_log {
+	color: #c30010;
+	font-weight: bold;
+	margin: 1rem;
+}
+
 
 @media screen and (max-width: 1050px){
 	.app__login-container{
