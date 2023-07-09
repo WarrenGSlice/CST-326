@@ -1,10 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 //npm install materialize-css@next
 
 const Admin = () => {
+    const [isAdmin, setIsAdmin] = useState(false);
+  
+    useEffect(() => {
+      checkLogIn();
+    }, []);
+
+    async function checkLogIn() {
+        try {
+            const accessToken = localStorage.getItem('user');
+            if(accessToken){
+                // Parsed to Object
+                const accessTokenParsed = JSON.parse(accessToken);
+                // Check if logged in with x-access-token from JWT in localStorage
+                const response = await fetch('/api/test/admin', {
+                    headers: {
+                        'x-access-token': accessTokenParsed.accessToken
+                    }
+                })
+
+                if (response.ok) {
+                    setIsAdmin(true);
+                    console.log('Admin Access Granted');
+                  } else if(!response.ok){
+                    setIsAdmin(false);
+                    console.log('Not an Admin')
+                  }
+            } else{
+                console.log('Access token not found in localStorage')
+            }
+            } catch (error) {
+                console.log('Error: ', error);
+            }
+        }
+
+    checkLogIn();
     const TITLE = "Admin Dashboard";
+    if (isAdmin){
     return (
     <><>
         <Helmet>
@@ -163,10 +199,13 @@ const Admin = () => {
                 </div>
             </main>
         </>
-
-
-
-  )
+  )} else {
+    return (
+        <div>
+        <h1>Error: You are not authorized to access this page!</h1>
+      </div>
+    )
+}
 }
 
 export default Admin

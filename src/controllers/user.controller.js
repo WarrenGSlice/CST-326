@@ -10,6 +10,15 @@ exports.moderatorBoard = (req, res) => {
     res.status(200).send('Moderator Content');
 }
 
+// exports.adminBoard = (req, res) => {
+//     res.status(200).send('Admin Content.');
+// }
+
+// Fixed response to login successfully
 exports.adminBoard = (req, res) => {
-    res.status(200).send('Admin Content.');
-}
+    const responseData = {
+      message: 'Admin Content'
+    };
+    res.status(200).json(responseData);
+  };
+  

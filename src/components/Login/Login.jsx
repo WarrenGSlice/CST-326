@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Axios from 'axios';
 import { useNavigate } from "react-router-dom"
-import { images } from '../../constants';
+import { data, images } from '../../constants';
 
 const inputs = document.querySelectorAll(".input");
 
@@ -41,6 +41,22 @@ const Login = () => {
   const login = async (inputs) => {
     const res = await Axios.post("/api/auth/signin", inputs);
     setCurrentUser(null);
+    // Extract user data from response
+    const { data } = res;
+    console.log('User Data:', data); // Debug logging
+    const user = {
+      id: data.id,
+      username: data.username,
+      email: data.email,
+      roles: data.roles,
+      accessToken: data.accessToken
+    };
+
+    // Store user in local storage
+    // const user = res;
+    localStorage.setItem('user', JSON.stringify(user));
+    // localStorage.setItem('user', data);
+    // localStorage.setItem('user', JSON.stringify(user.data));
   }
 
   const [loginStatus, setLoginStatus] = useState("");

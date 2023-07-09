@@ -11,11 +11,11 @@ const SpecialMenu = () => {
   const fetechMenuData = () => {
     fetch('https://tasty-bites.herokuapp.com/api/menu')
     .then(response => {
-        console.log('fetch')
+        // fetch menu
         return response.json()
     })
     .then(data => {
-        console.log('setData')
+        // set mento using setData
         setSpecials(data)
     })
   }
