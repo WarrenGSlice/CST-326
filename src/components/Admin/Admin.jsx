@@ -38,7 +38,7 @@ const Admin = () => {
             }
         }
 
-    checkLogIn();
+    // checkLogIn();
     const TITLE = "Admin Dashboard";
     if (isAdmin){
     return (
