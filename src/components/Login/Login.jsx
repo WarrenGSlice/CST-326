@@ -43,7 +43,6 @@ const Login = () => {
     setCurrentUser(null);
     // Extract user data from response
     const { data } = res;
-    console.log('User Data:', data); // Debug logging
     const user = {
       id: data.id,
       username: data.username,
@@ -53,10 +52,7 @@ const Login = () => {
     };
 
     // Store user in local storage
-    // const user = res;
     localStorage.setItem('user', JSON.stringify(user));
-    // localStorage.setItem('user', data);
-    // localStorage.setItem('user', JSON.stringify(user.data));
   }
 
   const [loginStatus, setLoginStatus] = useState("");
